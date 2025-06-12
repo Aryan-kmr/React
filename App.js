@@ -8,21 +8,20 @@
  * 
  * ReactElement(objebct) => HTML(Browser understands)
 */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// This is a simple React application that renders a heading element
-// using React.createElement and ReactDOM.createRoot.
 
-
-const parent = React.createElement("div",{ id: "parent" },
+const parent = React.createElement("div", { id: "parent" },
         React.createElement("div",
                 { id: "child" }, [
                 React.createElement("h1", {}, "I'm an h1 tag"),
-                React.createElement("h2", {}, "I'm an h2 tag"),
+                React.createElement("h2", {}, "Hello!"),
         ]),
         React.createElement("div",
                 { id: "child2" }, [
                 React.createElement("h1", {}, "I'm an h1 tag"),
-                React.createElement("h2", {}, "I'm an h2 tag"),
+                React.createElement("h2", {}, "Aryan Kumar"),
         ])
 );
 
