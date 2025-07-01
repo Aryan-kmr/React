@@ -1,46 +1,77 @@
-/**
- * <div id = "parent">
- *   <div id = "child">
- *     <h1>I'm an h1 tag</h1>
- *     <h2>I'm an h2 tag</h2>
- * </div>
- * </div>
- * 
- * ReactElement(objebct) => HTML(Browser understands)
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://pplx-res.cloudinary.com/image/upload/v1750946040/gpt4o_images/qtlkcvpejcmjqyt3wc3t.png"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const parent = React.createElement("div", { id: "parent" },
-        React.createElement("div",
-                { id: "child" }, [
-                React.createElement("h1", {}, "I'm an h1 tag"),
-                React.createElement("h2", {}, "Hello!"),
-        ]),
-        React.createElement("div",
-                { id: "child2" }, [
-                React.createElement("h1", {}, "I'm an h1 tag"),
-                React.createElement("h2", {}, "Aryan Kumar"),
-        ])
-);
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <img
+        className="res-logo"
+        src="https://i.ibb.co/PZPxXw90/res-logo.jpg"
+        alt="res-logo"
+      />
+      <h3>ASR ZAIKA</h3>
+      <h4>Biryani, North Indian, Asian</h4>
+      <h5>4.0 • 25-30 mins</h5>
+    </div>
+  );
+};
 
-//for multiple childs like multiple head use Array[].
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="Search">Search🔎</div>
+      <div className="res-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
 
-//JSX
-
-
-
-/**  const heading = React.createElement("h1", 
-        {id: "heading", xyz: "xyz"}, 
-        "Hello World from React!");*/
-
-
-
-console.log(parent); //return Object not h1 tag.in bracket id mentioned.
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-root.render(parent);
-
+root.render(<AppLayout />);

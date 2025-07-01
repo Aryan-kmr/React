@@ -19,16 +19,22 @@
   "author": "Aryan Kumar",
   "type": "commonjs",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
     "parcel": "^2.15.2"
   },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
-  "browserslist":[
+  "browserslist": [
     "last 2 versions"
   ]
 }
