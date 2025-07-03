@@ -32,7 +32,7 @@ const RestaurantCard = () => {
       />
       <h3>ASR ZAIKA</h3>
       <h4>Biryani, North Indian, Asian</h4>
-      <h5>4.0 • 25-30 mins</h5>
+      <h5>⭐4.0 • 25-30 mins</h5>
     </div>
   );
 };
